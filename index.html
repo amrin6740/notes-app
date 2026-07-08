@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>📝 My Notes App</h1>
+        <p class="subtitle">Write, save, and manage your notes easily.</p>
+
+        <!-- Note Input -->
+        <textarea
+            id="note"
+            placeholder="Write your note here..."></textarea>
+
+        <!-- Save Button -->
+        <button onclick="saveNote()">Save Note</button>
+
+        <!-- Saved Notes Section -->
+        <div class="notes-section">
+            <h2>Saved Notes</h2>
+            <div id="notes"></div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
